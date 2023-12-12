@@ -1,1 +1,56 @@
 /* место для вашего кода */
+<<<<<<< HEAD
+
+.content-section {
+    box-sizing: border-box;
+    margin: 0 50px;
+    min-height: 100px;
+    background-color: gainsboro;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 92px;
+    font-size: 18px;
+}
+
+.header-menu {
+    grid-column: 1 / 5;
+    align-self: center;
+    margin: 42px 0;
+}
+
+.header-menu-list {
+    display: flex;
+    justify-content: start;
+    gap: 32px;
+    list-style: circle;
+    list-style-position: outside;
+}
+
+.header-list-item {
+
+}
+
+.header-list-item-active {
+    list-style-type: none;
+}
+
+.header-logo {
+    grid-column: 6 / 8;
+    justify-self: center;
+}
+
+.header-logo-image {
+    width: 148px;
+    height: 105px;
+}
+
+.cover {
+    min-height: 100px;
+    background-color: gray;
+}
+=======
+>>>>>>> 0fdacf36b4a70dfb2ab6d78b30dcc54c5d38b13e
