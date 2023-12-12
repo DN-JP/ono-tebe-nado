@@ -18,7 +18,6 @@
 .header-menu {
     grid-column: 1 / 5;
     align-self: center;
-    margin: 42px 0;
 }
 
 .header-menu-list {
