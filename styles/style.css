@@ -69,7 +69,6 @@
 .cover-title {
     display: flex;
     position: absolute;
-    flex-direction: column;
     top: 165px;
     right: 50px;
     left: 50px;
@@ -80,15 +79,4 @@
     letter-spacing: 30px;
     line-height: 1.15;
     text-transform: uppercase;
-}
-
-.cover-title-2 {
-    align-self: center;
-    line-height: 100%;
-    padding-right: 60px;
-}
-
-.cover-title-3 {
-    text-align: end;
-    line-height: 100%;
 }
