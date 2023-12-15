@@ -4,7 +4,6 @@
     margin: 0 50px 180px 50px;
 }
 
-
 .header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -276,7 +275,7 @@
 }
 
 .footer-contacts-menu {
-    grid-column: 1 / 4;
+    grid-column: 1 / span 3;
     place-self: center start;
     font-family: Raleway;
     font-style: normal;
@@ -293,10 +292,25 @@
 .footer-menu-list{
     display: flex;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
 }
 
 .footer-menu-list-item {
     list-style: none;
+}
+
+.footer-social {
+    width: 240px;
+    grid-column: -1 / -4;
+    justify-self: end;
+}
+
+.footer-social-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.footer-social-icon {
+    height: 48px;
 }
