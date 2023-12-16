@@ -39,21 +39,25 @@
     height: 105px;
 }
 
-.header-contacts-menu {
-    grid-column: -4 / -1;
-    place-self: center end;
-    font-family: Raleway;
+.contacts-menu {
+    font-family: Raleway, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.35;
 }
 
+.header-contacts-menu {
+    grid-column: -4 / -1;
+    place-self: center end;
+}
+
 .cover {
     display: flex;
+    flex-direction: column;
     position: relative;
-    z-index: -2;
+    z-index: 1;
     width: 1440px;
-    height: 757px;
+    min-height: 757px;
     margin: auto;
     background-image: url(../images/cover.jpg);
     background-size: 100%;
@@ -62,7 +66,8 @@
 
 .overlay {
     position: absolute;
-    z-index: -1;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
     opacity: 0.6;
@@ -70,10 +75,13 @@
 }
 
 .cover-title {
-    position: absolute;
-    top: 165px;
-    right: 50px;
-    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1340px;
+    height: 355px;
+    margin: 165px auto 135px;
+    position: relative;
     color: #FFF;
     font-size: 100px;
     font-weight: 700;
@@ -87,13 +95,11 @@
 }
 
 .text-center {
-    margin-top: 20px;
     text-align: center;
     line-height: 100%;
 }
 
 .text-end {
-    margin-top: 20px;
     text-align: end;
     line-height: 100%;
 }
@@ -107,13 +113,13 @@
 }
 
 .cover-description {
-    position: absolute;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    gap: 78px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    justify-content: flex-end;
     align-items: center;
-    right: 50px;
-    bottom: 50px;
-    left: 422px;
     color: #FFF;
 }
 
@@ -125,7 +131,7 @@
     text-transform: uppercase;
 }
 
-.span-word-spacing-22 {
+.span-word-spacing {
     word-spacing: 22px;
 }
 
@@ -133,15 +139,15 @@
     width: 257px;
     height: 52px;
     color: #FFF;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 22px;
     text-transform: uppercase;
     background: transparent;
-    border: 1px solid #FFF;
+    border: 1px solid currentColor;
 }
 
 .lots {
     margin-top: 180px;
-    min-height: 579px;
 }
 
 .lots-heading {
@@ -174,12 +180,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     width: 430px;
     height: 100%;
     min-height: 450px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card-title {
+    position: relative;
     font-size: 22px;
     margin: 50px 40px 0 40px;
     font-weight: 700;
@@ -189,6 +199,7 @@
 }
 
 .card-text {
+    position: relative;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
@@ -196,24 +207,15 @@
 }
 
 .card-type-film {
-    position: relative;
-    z-index: -2;
     background-image: url(../images/card-lot-01.jpg);
-    background-size: 100%;
 }
 
 .card-type-book {
-    position: relative;
-    z-index: -2;
     background-image: url(../images/card-lot-02.jpg);
-    background-size: 100%;
 }
 
 .card-type-picture {
-    position: relative;
-    z-index: -2;
     background-image: url(../images/card-lot-03.jpg);
-    background-size: 100%;
 }
 
 .lots-look-more-link {
@@ -224,6 +226,7 @@
 .about {
     display: flex;
     justify-content: space-between;
+    margin-top: 181px;
 }
 
 .about-logo-column {
@@ -244,10 +247,8 @@
 }
 
 .about-column {
-    align-self: flex-end;
     margin-top: 100px;
-    width: 885px;
-    min-height: 388px;
+    max-width: 885px;
 }
 
 .about-title {
@@ -260,27 +261,26 @@
 }
 
 .about-text {
-    margin-top: 25px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.19;
+    line-height: 1.2;
+    margin-bottom: 0;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
 }
 
 .footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 0 52px 92px 52px;
+    margin: 0 50px 92px 50px;
     font-size: 18px;
 }
 
 .footer-contacts-menu {
     grid-column: 1 / span 3;
     place-self: center start;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.35;
 }
 
 .footer-menu {
@@ -300,15 +300,16 @@
 }
 
 .footer-social {
-    width: 240px;
     grid-column: -1 / -4;
     justify-self: end;
+
 }
 
 .footer-social-list {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    gap: 48px;
 }
 
 .footer-social-icon {
